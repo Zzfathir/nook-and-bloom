@@ -92,11 +92,14 @@ img {
   justify-content: space-between;
   background: var(--forest);
   color: var(--cream);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
+}
+section[id] {
+  scroll-margin-top: 86px;
 }
 .brand {
   display: inline-flex;
@@ -690,6 +693,9 @@ section > *:not(.section-label) {
   .site-header {
     height: 72px;
     padding: 0 6vw;
+  }
+  section[id] {
+    scroll-margin-top: 72px;
   }
   .desktop-nav {
     display: none;
