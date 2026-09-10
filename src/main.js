@@ -58,6 +58,7 @@ document.querySelectorAll(".tab").forEach((tab) =>
   }),
 );
 
+// mobile nav toggle
 const toggle = document.querySelector(".menu-toggle");
 toggle.addEventListener("click", () => {
   const open = toggle.getAttribute("aria-expanded") === "true";
@@ -72,6 +73,8 @@ document.querySelectorAll(".mobile-nav a").forEach((link) =>
   }),
 );
 
+
+// form submission handling
 const form = document.querySelector("#contact-form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
