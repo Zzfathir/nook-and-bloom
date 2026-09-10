@@ -3,6 +3,18 @@ import faviconUrl from "./assets/ic-nooknbloom.png";
 
 document.querySelector("#site-favicon").href = faviconUrl;
 
+const analyticsId = import.meta.env.VITE_GA_ID;
+if (analyticsId) {
+  const analyticsScript = document.createElement("script");
+  analyticsScript.async = true;
+  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
+  document.head.appendChild(analyticsScript);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = (...args) => window.dataLayer.push(args);
+  window.gtag("js", new Date());
+  window.gtag("config", analyticsId, { anonymize_ip: true });
+}
+
 const menu = {
   Coffee: [
     ["Espresso", "RM8", "A short, rich shot with a caramel finish"],
