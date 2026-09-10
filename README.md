@@ -73,39 +73,9 @@ npm run preview
 
 ## Deployment
 
-The project is ready to deploy to Netlify, Vercel, or another static hosting provider.
+I'm using Netlify to host this project, you can check up on this link to see the project🤓
+[Nook & Bloom](https://nooknbloom.netlify.app/)
 
-Recommended Netlify settings:
-
-- **Build command:** `npm run build`
-- **Publish directory:** `dist`
-- **Repository:** `https://github.com/Zzfathir/nook-and-bloom`
-
-### Google Analytics setup
-
-Analytics is opt-in and disabled by default. To enable it:
-
-1. Create a Google Analytics 4 web property and copy its measurement ID, such as `G-XXXXXXXXXX`.
-2. In Netlify, open **Site configuration → Environment variables**.
-3. Add `VITE_GA_ID` with the measurement ID as its value.
-4. Trigger a new deployment.
-
-The code does not contain a real tracking ID, and analytics will not load until this variable is supplied. Confirm the site's privacy and cookie requirements before enabling tracking for a real client.
-
-### Contact form setup
-
-The enquiry form uses Netlify Forms. After deploying to Netlify:
-
-1. Open the site in the Netlify dashboard.
-2. Go to **Forms** and confirm that the `enquiry` form was detected.
-3. Add an email notification under **Form notifications**.
-4. Set the recipient to `hello@nookandbloom.my`.
-
-The local development server cannot process Netlify Forms submissions. The form will deliver messages after deployment on the Netlify URL.
-
-### Custom 404 page
-
-The `public/404.html` file is copied to the production root during the Vite build. Netlify serves it automatically for unknown routes. Vercel and other static hosts may require their own 404 configuration, but the same file can be used as the custom error page.
 
 ## Notes
 
