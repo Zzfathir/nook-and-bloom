@@ -1,75 +1,103 @@
 # Nook & Bloom
 
-Nook & Bloom is a one-page website for a fictional neighbourhood cafe and bakery in Petaling Jaya. I treated the brief as a small real-world client project: the main goal is to help a visitor decide quickly whether to visit, see what is on the menu, find the cafe, and make an enquiry.
+## Project overview
 
-## What I built
+Nook & Bloom is a responsive one-page website for a fictional neighbourhood cafe and bakery in Petaling Jaya, Selangor. The site is designed to help visitors quickly discover the cafe, browse the menu, check opening hours, find the location, and send an enquiry.
 
-- Responsive one-page layout for desktop, tablet, and mobile
-- Desktop navigation and an accessible mobile menu
-- Hero section with opening hours, location, and clear calls to action
-- About section with the three requested feature points
-- Coffee, Bakes, and Brunch tabs that update the menu without a page reload
-- Value proposition section using editorial hierarchy instead of three generic cards
-- Six-image responsive gallery with hover treatment and descriptive alt text
-- Location section with address, opening hours, phone, email, and Google Maps directions
-- Enquiry form with required-field validation, invalid-email feedback, and success state
-- Smooth scrolling, subtle reveal motion, hover states, visible focus states, and reduced-motion support
-- SEO title, meta description, Open Graph metadata, favicon, semantic headings, and accessible labels
-- LocalBusiness JSON-LD structured data for cafe name, address, hours, contact, and cuisine
-- Netlify Forms-ready enquiry submission with a honeypot field and AJAX response states
+The visual direction follows the client brief: warm, calm, approachable, local, and slightly premium. The design uses forest green, warm cream, sage, and terracotta with editorial typography and generous spacing.
 
-## My design decisions
+## Tech stack
 
-The brief described the cafe as warm, calm, local, and slightly premium. I used a dark forest hero to make the first impression feel grounded, then used warm cream space for readability and sage and terracotta as supporting colours. Fraunces gives the headings a more human editorial feel, while DM Sans and DM Mono keep navigation, prices, and labels clear.
+- **Vite** for a fast development server and optimised production build
+- **Semantic HTML** for the main page structure, accessibility, and search-engine crawlability
+- **Vanilla JavaScript** for the menu tabs, mobile navigation, form validation, form submission, and reveal animation
+- **CSS** for the complete visual system, responsive layouts, hover states, focus states, and reduced-motion support
+- **Google Fonts** using Fraunces, DM Sans, and DM Mono
+- **Netlify Forms** for contact form delivery after deployment
 
-I kept the menu as a simple data object instead of repeating three separate blocks of markup. That makes the required category switching easier to maintain and gives the client a straightforward place to change menu items and prices later.
+I chose this stack because the project is a single-page marketing website with a small number of interactions. A framework such as React would work, but it would add application structure that this site does not currently need. Vite and vanilla JavaScript keep the bundle lightweight, easy to understand, and simple to deploy while still supporting the required behaviour.
 
-The biggest responsive decision was not simply shrinking the desktop layout. On mobile, the navigation becomes a full-width menu, the hero image moves below the copy, the menu becomes one column, the gallery changes its composition, and the contact form fields stack vertically.
+## Features
 
-## What was challenging
+- Responsive layouts for desktop, tablet, and mobile
+- Desktop navigation and accessible mobile navigation
+- Hero section with opening hours, location, and calls to action
+- About section with the requested cafe story and feature points
+- Coffee, Bakes, and Brunch menu tabs without a page reload
+- Data-driven menu rendering from one JavaScript object
+- Editorial value proposition section for Made Fresh, Good Coffee, and Stay Awhile
+- Six-image responsive gallery with lazy loading, alt text, and hover effects
+- Responsive Google Map embed and Google Maps directions link
+- Location, opening hours, phone number, and email contact details
+- Contact form with required-field and invalid-email validation
+- Inline form success and error states
+- Netlify Forms submission with honeypot spam protection
+- Smooth scrolling and subtle reveal motion
+- Reduced-motion support for users who prefer less animation
+- Visible keyboard focus states and accessible form labels
+- SEO title, meta description, Open Graph metadata, favicon, and theme color
+- `CafeOrCoffeeShop` JSON-LD structured data for local search context
 
-The hardest part was balancing a strong visual style with fast access to practical information. A cafe site can easily become too decorative, so I kept the hours, menu, address, and contact details close to the main user journey and made sure the important actions are available from the hero.
+## Installation
 
-## What I would improve with another two days
+Requirements:
 
-- Replace the placeholder photography with approved client images and generate responsive image sizes locally
-- Add a real Instagram link and verified social profiles
-- Run Lighthouse and browser checks at all requested breakpoints
+- Node.js 18 or newer
+- npm
 
-The enquiry form is configured for Netlify Forms. After deploying to Netlify, enable form notifications in the Netlify dashboard so enquiries are delivered by email. If deploying elsewhere, replace the form handler with that host's form service or backend endpoint.
-
-## Technical decision I am most proud of
-
-I am most pleased with using a small menu data model and one rendering function for all three menu categories. It satisfies the interaction requirement without introducing unnecessary application complexity, while still leaving the content easy to edit.
-
-## If this were a real client project
-
-I would confirm the exact address, phone number, social handles, photography rights, menu pricing, and preferred enquiry workflow before launch. I would also agree on who owns the content updates and whether the cafe needs a CMS later. Those details affect the final deployment more than adding another framework would.
-
-## Local development
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the local development server:
+
+```bash
 npm run dev
 ```
 
-Build for production with:
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-## Form delivery
+Preview the production build locally:
 
-The enquiry form uses Netlify Forms, which is available on Netlify's free tier and does not require an API key in the frontend. To deliver enquiries to `hello@nookandbloom.my`:
+```bash
+npm run preview
+```
 
-1. Deploy this project to Netlify.
-2. Open the site in the Netlify dashboard and go to **Forms**.
-3. Confirm that the `enquiry` form has been detected.
-4. Add an email notification under **Form notifications** and set the recipient to `hello@nookandbloom.my`.
+## Deployment
 
-The browser submits to `/` using the form name and Netlify handles delivery. This is safer than putting an email-service API key in client-side JavaScript. A genuinely open-source email backend would need to be self-hosted and would still require SMTP credentials, so it would add infrastructure that this starter project does not need.
+The project is ready to deploy to Netlify, Vercel, or another static hosting provider.
+
+Recommended Netlify settings:
+
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+- **Repository:** `https://github.com/Zzfathir/nook-and-bloom`
+
+### Contact form setup
+
+The enquiry form uses Netlify Forms. After deploying to Netlify:
+
+1. Open the site in the Netlify dashboard.
+2. Go to **Forms** and confirm that the `enquiry` form was detected.
+3. Add an email notification under **Form notifications**.
+4. Set the recipient to `hello@nookandbloom.my`.
+
+The local development server cannot process Netlify Forms submissions. The form will deliver messages after deployment on the Netlify URL.
 
 ## Notes
 
-The current gallery uses remote Unsplash URLs as temporary royalty-free placeholders. For a real launch, I would replace them with compressed local assets or approved client photography.
+- The gallery currently uses remote Unsplash URLs as temporary royalty-free placeholders. For a real client launch, I would replace them with approved photography and compressed local WebP or AVIF assets.
+- The contact form is configured for Netlify Forms and does not expose an email-service API key in the browser.
+- The cafe address, phone number, email, opening hours, and menu are based on the supplied fictional client brief and should be confirmed before launch.
+- The social links are placeholders until the client supplies the official accounts.
+- The project was tested with `npm run build`.
+
+## Repository
+
+GitHub: [Zzfathir/nook-and-bloom](https://github.com/Zzfathir/nook-and-bloom)
