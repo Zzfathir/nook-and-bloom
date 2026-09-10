@@ -18,7 +18,7 @@ The visual direction follows the client brief: warm, calm, approachable, local, 
 
 I chose this stack because the project is a single-page marketing website with a small number of interactions. A framework such as React would work, but it would add application structure that this site does not currently need. Vite and vanilla JavaScript keep the bundle lightweight, easy to understand, and simple to deploy while still supporting the required behaviour.
 
-## Features
+## Features I've made
 
 - Responsive layouts for desktop, tablet, and mobile
 - Desktop navigation and accessible mobile navigation
