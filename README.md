@@ -71,8 +71,24 @@ npm run preview
 
 ## Deployment
 
+The project is ready to deploy to Netlify, Vercel, or another static hosting provider.
 
+Recommended Netlify settings:
 
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+- **Repository:** `https://github.com/Zzfathir/nook-and-bloom`
+
+### Contact form setup
+
+The enquiry form uses Netlify Forms. After deploying to Netlify:
+
+1. Open the site in the Netlify dashboard.
+2. Go to **Forms** and confirm that the `enquiry` form was detected.
+3. Add an email notification under **Form notifications**.
+4. Set the recipient to `hello@nookandbloom.my`.
+
+The local development server cannot process Netlify Forms submissions. The form will deliver messages after deployment on the Netlify URL.
 
 ## Notes
 
