@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link id="site-favicon" rel="icon" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nook & Bloom is a neighbourhood cafe in Petaling Jaya serving specialty coffee, freshly baked pastries and comforting brunch favourites." />
+    <meta name="theme-color" content="#24352B" />
+    <meta property="og:title" content="Nook & Bloom | Coffee, Bakery & Brunch in Petaling Jaya" />
+    <meta property="og:description" content="A warm little corner for good coffee, fresh bakes, and slow mornings." />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Nook & Bloom",
+        "description": "A neighbourhood cafe in Petaling Jaya serving specialty coffee, freshly baked pastries and comforting brunch favourites.",
+        "telephone": "+60 12-345 6789",
+        "email": "hello@nookandbloom.my",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "18, Jalan 17/54, Seksyen 17",
+          "postalCode": "46300",
+          "addressLocality": "Petaling Jaya",
+          "addressRegion": "Selangor",
+          "addressCountry": "MY"
+        },
+        "openingHours": "Mo-Su 08:00-21:00",
+        "servesCuisine": ["Coffee", "Bakery", "Brunch"]
+      }
+    </script>
+    <title>Nook & Bloom | Coffee, Bakery & Brunch in Petaling Jaya</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="site-header" id="home">
+      <a class="brand" href="#home" aria-label="Nook & Bloom home"
+        ><span class="brand-mark">N</span><span>Nook <i>&</i> Bloom</span></a
+      >
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">Visit us <span>↗</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span><b class="sr-only">Open menu</b></button>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">Visit us <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-dark">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Petaling Jaya · Since 2026</p>
+          <h1>A little corner for good coffee <em>&</em> slow mornings.</h1>
+          <p class="hero-intro">Freshly brewed coffee, handmade pastries and comforting brunch, served in the heart of Petaling Jaya.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#menu">View our menu <span>↗</span></a
+            ><a class="text-link light-link" href="#location">Find us <span>↘</span></a>
+          </div>
+        </div>
+        <div class="hero-image reveal">
+          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1600&q=85" alt="Warmly lit cafe interior with wooden tables and hanging plants" />
+          <div class="hero-stamp">
+            <span>Open daily</span><strong>8:00 AM<br />— 9:00 PM</strong>
+          </div>
+        </div>
+        <div class="hero-foot"><span>Scroll to wander</span><span class="line"></span><span>01 / 06</span></div>
+      </section>
+      <section class="intro section-cream" id="about">
+        <div class="section-label">01 / The nook</div>
+        <div class="intro-grid">
+          <div>
+            <p class="eyebrow terracotta">A place to pause</p>
+            <h2>More than just a cup of coffee.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>Nook & Bloom started with a simple idea: create a neighbourhood cafe where people can slow down for a while.</p>
+            <p>Our coffee is brewed fresh every day, our pastries are baked in small batches, and our kitchen serves comforting brunch favourites made with good ingredients and a little bit of care.</p>
+            <p>Whether you are catching up with a friend, getting some work done, or simply looking for somewhere to breathe between a busy week, there is always a seat waiting for you.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div><span>01</span><strong>Freshly baked</strong><small>Small batches, all day</small></div>
+          <div><span>02</span><strong>Good coffee</strong><small>Independent roasters</small></div>
+          <div><span>03</span><strong>A place to stay</strong><small>Wi-Fi and sunlight</small></div>
+        </div>
+      </section>
+      <section class="menu-section section-sage" id="menu">
+        <div class="section-label">02 / On the table</div>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow forest">Made for your morning</p>
+            <h2>Something for every<br /><em>kind of morning.</em></h2>
+          </div>
+          <p>Take your time. Our menu changes with the seasons, but the good stuff stays.</p>
+        </div>
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories"><button class="tab active" type="button" role="tab" aria-selected="true" data-category="Coffee">Coffee</button><button class="tab" type="button" role="tab" aria-selected="false" data-category="Bakes">Bakes</button><button class="tab" type="button" role="tab" aria-selected="false" data-category="Brunch">Brunch</button></div>
+        <div class="menu-list" id="menu-list" aria-live="polite"></div>
+      </section>
+      <section class="why section-dark">
+        <div class="section-label">03 / Why here</div>
+        <div class="why-grid">
+          <div>
+            <p class="eyebrow terracotta">The Nook & Bloom feeling</p>
+            <h2>Good things<br /><em>take time.</em></h2>
+            <p class="why-note">Come for the coffee. Stay for the feeling that there is nowhere else you need to be.</p>
+          </div>
+          <div class="why-list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Made fresh</h3>
+                <p>Pastries baked in small batches throughout the day, so every visit has a little surprise.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Good beans, good coffee</h3>
+                <p>Carefully selected beans from independent roasters, brewed with attention.</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Stay awhile</h3>
+                <p>Free Wi-Fi, comfortable seating and plenty of natural light for your long-table days.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="gallery-section section-cream" id="gallery">
+        <div class="section-label">04 / Around the cafe</div>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow terracotta">A little visual diary</p>
+            <h2>Come as you are.</h2>
+          </div>
+          <a class="text-link" href="#contact">Follow along on Instagram <span>↗</span></a>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-1">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" alt="Freshly poured coffee at Nook and Bloom" />
+            <figcaption>Freshly poured coffee <span>↗</span></figcaption>
+          </figure>
+          <figure class="gallery-item gallery-2">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80" alt="Morning bakes at Nook and Bloom" />
+            <figcaption>Morning bakes <span>↗</span></figcaption>
+          </figure>
+          <figure class="gallery-item gallery-3">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" alt="A quiet cafe corner at Nook and Bloom" />
+            <figcaption>A quiet corner <span>↗</span></figcaption>
+          </figure>
+          <figure class="gallery-item gallery-4">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=80" alt="Comforting brunch plates at Nook and Bloom" />
+            <figcaption>Comforting plates <span>↗</span></figcaption>
+          </figure>
+          <figure class="gallery-item gallery-5">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1000&q=80" alt="Coffee beans at Nook and Bloom" />
+            <figcaption>Good beans <span>↗</span></figcaption>
+          </figure>
+          <figure class="gallery-item gallery-6">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=1200&q=80" alt="Seating area at Nook and Bloom" />
+            <figcaption>Stay awhile <span>↗</span></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="location-section section-terracotta" id="location">
+        <div class="location-grid">
+          <div>
+            <div class="section-label">05 / Find your way</div>
+            <p class="eyebrow cream-text">Come say hello</p>
+            <h2>Your new<br /><em>neighbourhood.</em></h2>
+            <address>18, Jalan 17/54<br />Seksyen 17, 46300<br />Petaling Jaya, Selangor</address>
+            <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=18+Jalan+17%2F54+Seksyen+17+Petaling+Jaya" target="_blank" rel="noreferrer">Get directions <span>↗</span></a>
+          </div>
+          <div class="hours">
+            <p class="eyebrow cream-text">Hours</p>
+            <p>Monday — Sunday<br /><strong>8:00 AM — 9:00 PM</strong></p>
+            <p class="eyebrow cream-text contact-label">Contact</p>
+            <a href="tel:+60123456789">+60 12-345 6789</a><a href="mailto:hello@nookandbloom.my">hello@nookandbloom.my</a>
+          </div>
+          <div class="map-frame">
+            <iframe title="Map showing Nook & Bloom in Petaling Jaya" loading="lazy" src="https://www.google.com/maps?q=18%20Jalan%2017%2F54%2C%20Seksyen%2017%2C%2046300%20Petaling%20Jaya%2C%20Selangor&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section section-cream" id="contact">
+        <div class="section-label">06 / Say hello</div>
+        <div class="contact-grid">
+          <div>
+            <p class="eyebrow terracotta">We would love to hear from you</p>
+            <h2>Have a question?<br /><em>Say hello.</em></h2>
+            <p>Planning a gathering, looking for a private space, or simply want to ask us something? Send us a message and we will get back to you.</p>
+          </div>
+          <form id="contact-form" name="enquiry" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="enquiry" />
+            <p class="sr-only">
+              <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+            </p>
+            <div class="field-row">
+              <label>Name*<input type="text" name="name" autocomplete="name" required /><span class="error" data-error="name"></span></label><label>Email*<input type="email" name="email" autocomplete="email" required /><span class="error" data-error="email"></span></label>
+            </div>
+            <div class="field-row">
+              <label>Phone number<input type="tel" name="phone" autocomplete="tel" /></label><label>Subject*<input type="text" name="subject" required /><span class="error" data-error="subject"></span></label>
+            </div>
+            <label>Message*<textarea name="message" rows="4" required></textarea><span class="error" data-error="message"></span></label><button class="button button-dark submit-button" type="submit">Send message <span>↗</span></button>
+            <p class="form-success" role="status" hidden>Thanks! Your message has been sent. We will get back to you soon.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer section-dark">
+      <div class="footer-top">
+        <div>
+          <a class="brand footer-brand" href="#home"
+            ><span class="brand-mark">N</span><span>Nook <i>&</i> Bloom</span></a
+          >
+          <p>A little corner for good coffee<br />& slow mornings.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <p class="eyebrow terracotta">Explore</p>
+            <a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a>
+          </div>
+          <div>
+            <p class="eyebrow terracotta">Follow</p>
+            <a href="#contact">Instagram</a><a href="#contact">Facebook</a><a href="#contact">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Nook & Bloom</span><span>Petaling Jaya, Selangor</span><a href="#home">Back to top ↑</a></div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
