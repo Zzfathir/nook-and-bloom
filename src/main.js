@@ -41,6 +41,8 @@ const menu = {
 };
 
 const menuList = document.querySelector("#menu-list");
+
+// render menu items based on selected category
 function renderMenu(category = "Coffee") {
   menuList.innerHTML = menu[category].map(([name, price, description]) => `<article class="menu-item"><div class="menu-item-name"><h3>${name}</h3><span></span><strong>${price}</strong></div><p>${description}</p></article>`).join("");
 }
