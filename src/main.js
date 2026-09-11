@@ -1,5 +1,5 @@
 import "./style.css";
-import faviconUrl from "./assets/ic-nooknbloom.png";
+import faviconUrl from "./assets/ic-nooknbloom.ico";
 
 document.querySelector("#site-favicon").href = faviconUrl;
 
